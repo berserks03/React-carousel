@@ -37,7 +37,7 @@ const Slider: FC<SliderProps> = ({ sliderImage, autoPlay }) => {
   };
 
   const mouseStartHandler = (event: React.MouseEvent) => {
-      setTouchStart(event.clientX);
+    setTouchStart(event.clientX);
   };
 
   const mouseMoveHandler = (event: React.MouseEvent) => {
@@ -45,13 +45,13 @@ const Slider: FC<SliderProps> = ({ sliderImage, autoPlay }) => {
   };
 
   const touchEndHandler = () => {
-      if (touchStart - touchEnd > 100) {
-          nextSlide();
-      }
+    if (touchStart - touchEnd > 100) {
+      nextSlide();
+    }
 
-      if (touchStart - touchEnd < -100) {
-        prevSlide();
-      }
+    if (touchStart - touchEnd < -100) {
+      prevSlide();
+    }
   };
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -64,15 +64,14 @@ const Slider: FC<SliderProps> = ({ sliderImage, autoPlay }) => {
     setActiveIndex(activeIndex === len ? 0 : activeIndex + 1);
   };
 
-  if (autoPlay>0) {
+  if (autoPlay > 0) {
     useEffect(() => {
       const interval = setInterval(() => {
         setActiveIndex(activeIndex === len ? 0 : activeIndex + 1);
-      }, autoPlay*1000);
+      }, autoPlay * 1000);
       return () => clearInterval(interval);
-    }, [activeIndex]);    
+    }, [activeIndex]);
   }
-
 
   return (
     <div className="slider-container">

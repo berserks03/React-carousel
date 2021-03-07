@@ -5,7 +5,7 @@ import sliderImages from './assets/SliderImages';
 const App = () => {
   return (
     <Fragment>
-      <Slider sliderImage={sliderImages} autoPlay={3} />
+      <Slider sliderImage={sliderImages} autoPlay={0} />
     </Fragment>
   );
 };

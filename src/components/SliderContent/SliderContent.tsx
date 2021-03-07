@@ -38,9 +38,18 @@ const SliderContent: FC<SliderContentProps> = ({
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
         >
-          <img draggable="false" className="slide-image" src={slide.url} alt="slide-image" />
-          <h3 className="slide-title"><span>{slide.title}</span> </h3>
-          <p className="slide-text"><span>{slide.description}</span></p>
+          <img
+            draggable="false"
+            className="slide-image"
+            src={slide.url}
+            alt="slide-image"
+          />
+          <h3 className="slide-title">
+            <span>{slide.title}</span>{' '}
+          </h3>
+          <p className="slide-text">
+            <span>{slide.description}</span>
+          </p>
         </div>
       ))}
     </section>
