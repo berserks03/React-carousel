@@ -1,5 +1,7 @@
 # React carousel
 
+[https://angry-poitras-db4433.netlify.app](https://angry-poitras-db4433.netlify.app)
+
 ## Setup environment
 #### Create directory and setup `package.json` file
 ```
